@@ -1,0 +1,615 @@
+html {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: RW Dewi;
+  src: url("/fonts/RFDewi-Regular.ttf");
+}
+
+@font-face {
+  font-family: RW Dewi Expanded;
+  src: url("../fonts/RFDewiExtended-Bold.ttf");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #5c8694 #dce3e5;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font: {
+    family: RW Dewi Expanded;
+    weight: 800;
+    size: 100px;
+  }
+  color: #f0f0f0;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font: {
+    family: RW Dewi Expanded;
+    weight: 800;
+    size: 40px;
+  }
+  color: #f0f0f0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font: {
+    family: RW Dewi Expanded;
+    weight: 800;
+    size: 32px;
+  }
+  color: #f0f0f0;
+}
+
+h4 {
+  text-transform: uppercase;
+  font: {
+    family: RW Dewi Expanded;
+    weight: 800;
+    size: 20px;
+  }
+  color: #f0f0f0;
+}
+
+.menu__text {
+  color: #f0f0f0;
+  text-transform: uppercase;
+  font: {
+    family: RW Dewi;
+    size: 15px;
+    weight: 700;
+  }
+}
+
+.button {
+  border: 2px solid #f0f0f0;
+  border-radius: 100px;
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+  padding: 10px 20px;
+  text-align: center;
+  height: 38px;
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.header {
+  padding-top: 20px;
+  background-image: linear-gradient(
+      to top,
+      rgba(32, 32, 35, 0.95),
+      rgba(32, 32, 35, 0.95)
+    ),
+    url("/img/Background/Slider_oil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    gap: 41px;
+    flex-wrap: wrap;
+    .header__nav-about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .header__nav-button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        @media (max-width: 820px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1355px) {
+        order: 2;
+      }
+    }
+
+    .header__nav-menu {
+      .header__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 820px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1355px) {
+      row-gap: 5px;
+    }
+
+    @media (max-width: 820px) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.slider__main {
+  width: 100%;
+  height: 700px;
+
+  .slider__main-title {
+    height: 100%;
+
+    h1 {
+      position: absolute;
+      padding-top: 60px;
+      width: 100%;
+      height: 700px;
+      top: 100px;
+      background: url("/img/Background/Slider_oil.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: -100px;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+
+      span {
+        font-size: 300px;
+
+        @media (max-width: 1492px) {
+          font-size: 200px;
+        }
+
+        @media (max-width: 1000px) {
+          font-size: 120px;
+        }
+
+        @media (max-width: 756px) {
+          font-size: 80px;
+        }
+
+        @media (max-width: 510px) {
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 1492px) {
+        font-size: 80px;
+        background-size: auto;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: 40px;
+        background-size: auto;
+      }
+
+      @media (max-width: 756px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 510px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.slider__oil {
+  background-color: #202023;
+  padding-bottom: 30px;
+  width: 100%;
+  .slider {
+    height: 168px;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-wrapper {
+        transition-timing-function: linear;
+        width: 1760px;
+
+        .swiper-slide {
+          align-items: center;
+
+          .swiper__slide-box {
+            display: flex;
+            height: 60px;
+            align-items: center;
+            align-content: center;
+            gap: 10px;
+
+            .swiper__slider-text {
+              color: #f0f0f0;
+              width: 210px;
+              margin-left: 10px;
+            }
+
+            .swiper__slider-splach {
+              color: #f0f0f0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.products {
+  background-color: #202023;
+  padding-bottom: 80px;
+
+  .products__box {
+    display: flex;
+    justify-content: center;
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      width: 525px;
+      background-color: white;
+      padding: 40px;
+      border-right: 1px solid #cacaca;
+    }
+
+    .products__box-name {
+      display: flex;
+      flex-direction: column;
+
+      .products__box-title {
+        color: #202023;
+        text-transform: uppercase;
+        max-width: 153px;
+        margin-bottom: 255px;
+      }
+
+      .button {
+        margin-top: auto;
+        background-color: #202023;
+        color: #f0f0f0;
+        border: none;
+      }
+    }
+
+    .products__box-choice {
+      display: flex;
+      flex-direction: column;
+      gap: 78px;
+
+      .products__choice-toggle {
+        input[type="checkbox"] {
+          width: 0;
+          height: 0;
+          visibility: hidden;
+        }
+
+        .product__toogle-title {
+          display: block;
+          max-width: 341px;
+          height: 48px;
+          background-color: #202023;
+          border-radius: 48px;
+          position: relative;
+          cursor: pointer;
+          transition: 0.5s;
+          color: #f0f0f0;
+          text-align: end;
+
+          &::after {
+            content: "";
+            width: 128px;
+            height: 38px;
+            background-color: #2ff3ff;
+            position: absolute;
+            border-radius: 100px;
+            top: 5px;
+            left: 5px;
+            transition: 0.5s;
+          }
+        }
+
+        input:checked + label:after {
+          width: 200px;
+          left: calc(100% - 5px);
+          transform: translateX(-100%);
+        }
+      }
+
+      .products__choice-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .products__form-item {
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+
+          .products__form-input {
+            padding-left: 10px;
+            border-radius: 10px;
+            max-width: 388px;
+            padding-top: 20px;
+            width: 100%;
+            height: 61px;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid #7d7d7d;
+            font-size: 14px;
+            color: #202023;
+
+            &:hover,
+            &:focus {
+              border: 1px solid #0094ff;
+            }
+          }
+
+          .products__form-label {
+            color: #7d7d7d;
+            text-transform: none;
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            right: 15px;
+            top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 40px;
+            transition: 0.3s;
+          }
+
+          .products__form-input:focus ~ .products__form-label,
+          .products__form-input:not(:focus):valid ~ .products__form-label {
+            top: -5px;
+          }
+        }
+      }
+
+      .products__choice-button {
+        border: 2px solid #202023;
+        .menu__text {
+          color: #202023;
+        }
+      }
+    }
+
+    .products__box-info {
+      gap: 20px;
+      justify-content: center;
+
+      img {
+        width: 260px;
+        height: auto;
+        cursor: pointer;
+      }
+
+      .title__products {
+        color: #7d7d7d;
+        text-transform: uppercase;
+        font: {
+          family: RW Dewi;
+          size: 15px;
+          weight: 700;
+        }
+      }
+
+      .menu__text {
+        color: #202023;
+      }
+
+      .box__info-list {
+        display: flex;
+
+        .info__list-menu {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .list__menu-item {
+            color: #7d7d7d;
+            font: {
+              family: RW Dewi;
+              size: 15px;
+              weight: 700;
+            }
+          }
+        }
+
+        .--litrs {
+          margin-right: 40px;
+        }
+
+        .--price {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 1080px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}
+
+.catalog {
+  background-color: #202023;
+
+  .catalog__title {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .catalog__box {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 335px);
+    grid-template-rows: repeat(2, 335px);
+    gap: 20px;
+    justify-content: center;
+
+    .catalog__box-item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border: 2px solid #f0f0f0;
+
+      .--up {
+        max-width: 418px;
+        width: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        h4,
+        h5 {
+          color: #2ff3ff;
+        }
+        border: 2px solid #2ff3ff;
+      }
+
+      .catalog__box-arrow {
+        max-width: 24px;
+        align-self: flex-end;
+        width: 100%;
+        height: auto;
+        margin-top: auto;
+      }
+    }
+
+    .--catalog__oil-1 {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      background-image: url("../img/Catalog/oil_back-1.svg");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-position-y: 90px;
+
+      .catalog__box-arrow {
+        order: 1;
+      }
+    }
+
+    .--catalog__oil-2 {
+      grid-row: 1 / 3;
+      background-image: url("../img/Catalog/oil_back-2.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-position-y: 162px;
+
+      .catalog__box-title {
+        order: 2;
+      }
+
+      .catalog__box-arrow {
+        margin-bottom: auto;
+        margin-top: 0;
+      }
+
+      @media (max-width: 1110px) {
+        grid-row: 2/4;
+      }
+    }
+
+    .--catalog__oil-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 342px;
+      .catalog__box-title {
+        text-align: center;
+        width: 258px;
+      }
+
+      @media (max-width: 1450px) {
+        display: none;
+      }
+    }
+
+    .--catalog__oil-4 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      border-radius: 342px;
+
+      .catalog__box-title {
+        text-align: center;
+        width: 258px;
+      }
+
+      @media (max-width: 1450px) {
+        display: none;
+      }
+    }
+
+    .--catalog__oil-5 {
+      background-image: url("../img/Catalog/oil_back-5.svg");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-position-y: 90px;
+
+      @media (max-width: 1450px) {
+        grid-column: 1/2;
+      }
+
+      @media (max-width: 1110px) {
+        grid-column: 2/3;
+      }
+    }
+
+    .--catalog__oil-6 {
+      background-image: url("../img/Catalog/oil_back-6.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-position-y: 90px;
+
+      @media (max-width: 1110px) {
+        grid-row: 2/3;
+      }
+    }
+
+    @media (max-width: 1450px) {
+      grid-template-columns: repeat(3, 335px);
+    }
+
+    @media (max-width: 1110px) {
+      grid-template-columns: repeat(2, 335px);
+      grid-template-rows: repeat(4, 335px);
+    }
+  }
+}
